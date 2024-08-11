@@ -1,0 +1,32 @@
+// Step 1: Create a variable to hold your NFTs
+let nftCollection = [];  
+
+// Step 2: mintNFT function
+function mintNFT(name, artist) {
+    let nft = {
+        name: name,
+        artist: artist
+    };
+    nftCollection.push(nft);
+}
+
+// Step 3: listNFTs function
+function listNFTs() {
+    for (let nft of nftCollection) {
+        console.log("Name: " + nft.name);  
+        console.log("Artist: " + nft.artist);  
+    }
+}
+
+// Step 4: getTotalSupply function
+function getTotalSupply() {
+    return nftCollection.length;
+}
+
+// Call your functions below this line
+mintNFT("Artwork 1", "Artist A");
+mintNFT("Artwork 2", "Artist B");
+
+listNFTs();
+
+console.log("Total Supply: " + getTotalSupply());
